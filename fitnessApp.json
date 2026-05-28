@@ -1,0 +1,63 @@
+{
+    "endpoints": {
+        "login":"/login",
+        "register":"/register",
+        "addWorkout": "/addWorkout",
+        "getMyWorkouts":"/getMyWorkouts",
+        "updateWorkout":"/updateWorkout",
+        "deleteWorkout":"/deleteWorkout",
+        "completeWorkoutStatus":"/completeWorkoutStatus"
+    }
+}
+
+{
+  "project": "Fitness Tracker API",
+  "routes": [
+    {
+      "name": "Register User",
+      "method": "POST",
+      "endpoint": "/users/register",
+      "body": {
+        "email": "user@mail.com",
+        "password": "password123"
+      }
+    },
+    {
+      "name": "Login User",
+      "method": "POST",
+      "endpoint": "/users/login",
+      "body": {
+        "email": "user@mail.com",
+        "password": "password123"
+      }
+    },
+    {
+      "name": "Retrieve User Details",
+      "method": "GET",
+      "endpoint": "/users/details",
+      "headers": {
+        "Authorization": "Bearer <token>"
+      }
+    },
+    {
+      "name": "Add Workout",
+      "method": "POST",
+      "endpoint": "/workouts/addWorkout",
+      "headers": {
+        "Authorization": "Bearer <token>"
+      },
+      "body": {
+        "name": "Cardio",
+        "duration": "30 mins"
+      }
+    },
+    {
+      "name": "Get My Workouts",
+      "method": "GET",
+      "endpoint": "/workouts/myWorkouts",
+      "headers": {
+        "Authorization": "Bearer <token>"
+      }
+    }
+  ]
+}
